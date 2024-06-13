@@ -1,0 +1,23 @@
+// public variables here
+    string public name = "Dev";
+    string public abbreviation = "mobile";
+    uint public supply ;
+
+    // mapping variable here
+    mapping(address => uint) map;
+    
+    // mint function
+    function mint(address add,uint val) public {
+        supply = supply + val;
+        map[add] = map[add] + val;
+    }
+
+    // burn function
+    function burn(address add,uint val) public {
+        if(map[add] >= val){
+            supply = supply - val;
+            map[add] = map[add] - val;
+        }
+    }
+
+}
