@@ -1,5 +1,10 @@
-// public variables here
-    string public name = "Dev";
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract project {
+
+    // public variables here
+    string public name = "DEV";
     string public abbreviation = "mobile";
     uint public supply ;
 
